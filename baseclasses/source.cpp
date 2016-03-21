@@ -18,7 +18,7 @@
 // the threads processing loop, when it is safe to get the filter critical
 // section from within FillBuffer().
 
-#include "stdafx.h"
+#include <streams.h>
 
 
 //

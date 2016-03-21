@@ -7,9 +7,10 @@
 //------------------------------------------------------------------------------
 
 
-#include "stdafx.h"
+#include <streams.h>        // DirectShow base class definitions
 #include <mmsystem.h>       // Needed for definition of timeGetTime
 #include <limits.h>         // Standard data type limit definitions
+#include <measure.h>        // Used for time critical log functions
 
 #pragma warning(disable:4355)
 

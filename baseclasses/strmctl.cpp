@@ -7,7 +7,8 @@
 //------------------------------------------------------------------------------
 
 
-#include "stdafx.h"
+#include <streams.h>
+#include <strmctl.h>
 
 CBaseStreamControl::CBaseStreamControl(__inout HRESULT *phr)
 : m_StreamState(STREAM_FLOWING)

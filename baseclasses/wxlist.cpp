@@ -49,7 +49,8 @@
       it reduces the number of special cases.  All inserts look the same.
 */
 
-#include "stdafx.h"
+
+#include <streams.h>
 
 /* set cursor to the position of each element of list in turn  */
 #define INTERNALTRAVERSELIST(list, cursor)               \

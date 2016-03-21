@@ -8,8 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-#include "stdafx.h"
 #define _WINDLL
+
+#include <streams.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <dvdmedia.h>

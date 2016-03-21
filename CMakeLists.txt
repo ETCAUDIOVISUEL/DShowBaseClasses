@@ -15,6 +15,12 @@ endif()
 
 set(CMAKE_CONFIGURATION_TYPES "Release;Debug" CACHE STRING "" FORCE)
 
+add_definitions(
+    -D_UNICODE
+    -DUNICODE
+    -DWIN32
+)
+
 # CMake finder files
 configure_file(baseclasses-config.cmake.in baseclasses-config.cmake @ONLY)
 configure_file(baseclasses-configVersion.cmake.in baseclasses-configVersion.cmake @ONLY)

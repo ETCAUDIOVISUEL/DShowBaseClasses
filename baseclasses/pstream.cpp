@@ -7,10 +7,11 @@
 //------------------------------------------------------------------------------
 
 
-#include "stdafx.h"
+#include <streams.h>
 #include <strsafe.h>
 
 #ifdef PERF
+#include <measure.h>
 #endif
 // #include "pstream.h"  in streams.h
 

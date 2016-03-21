@@ -251,7 +251,9 @@
 // And that's IT!!  Any further (essentially spurious) reconnects peter out
 // with no change in the chain.
 
-#include "stdafx.h"
+#include <streams.h>
+#include <measure.h>
+#include <transip.h>
 
 
 // =================================================================

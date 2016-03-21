@@ -12,7 +12,8 @@
 // property methods. We also implement CPosPassThru that can be used by
 // renderers and transforms to pass by IMediaPosition and IMediaSeeking
 
-#include "stdafx.h"
+
+#include <streams.h>
 #include <limits.h>
 #include "seekpt.h"
 

@@ -292,7 +292,7 @@ public:
     CDispBasic() { m_pString = m_String; };
     ~CDispBasic();
 protected:
-    TCHAR* m_pString;  // normally points to m_String... unless too much data
+    PTCHAR m_pString;  // normally points to m_String... unless too much data
     TCHAR m_String[50];
 };
 class CDisp : public CDispBasic

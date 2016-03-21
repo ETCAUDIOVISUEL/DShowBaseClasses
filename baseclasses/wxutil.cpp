@@ -7,7 +7,8 @@
 // Copyright (c) 1992-2001 Microsoft Corporation.  All rights reserved.
 //------------------------------------------------------------------------------
 
-#include "stdafx.h"
+
+#include <streams.h>
 #define STRSAFE_NO_DEPRECATE
 #include <strsafe.h>
 
@@ -747,13 +748,21 @@ MMRESULT CompatibleTimeSetEvent( UINT uDelay, UINT uResolution, __in LPTIMECALLB
 
 bool TimeKillSynchronousFlagAvailable( void )
 {
-    OSVERSIONINFOEX osverinfo;
-    osverinfo.dwOSVersionInfoSize = sizeof(osverinfo);
-    osverinfo.dwMajorVersion = 5;
-    osverinfo.dwMinorVersion = 1;
+    OSVERSIONINFO osverinfo;
 
-    if (VerifyVersionInfo(&osverinfo, VER_MAJORVERSION, VER_MINORVERSION))
-        return true;
+    osverinfo.dwOSVersionInfoSize = sizeof(osverinfo);
+
+    if( GetVersionEx( &osverinfo ) ) {
+        
+        // Windows XP's major version is 5 and its' minor version is 1.
+        // timeSetEvent() started supporting the TIME_KILL_SYNCHRONOUS flag
+        // in Windows XP.
+        if( (osverinfo.dwMajorVersion > 5) || 
+            ( (osverinfo.dwMajorVersion == 5) && (osverinfo.dwMinorVersion >= 1) ) ) {
+            return true;
+        }
+    }
+
     return false;
 }
 

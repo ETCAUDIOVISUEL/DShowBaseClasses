@@ -11,7 +11,8 @@
 // helper class that derived pin objects can use to compare media
 // types etc. Has same data members as the struct AM_MEDIA_TYPE defined
 // in the streams IDL file, but also has (non-virtual) functions
-#include "stdafx.h"
+
+#include <streams.h>
 #include <mmreg.h>
 
 CMediaType::~CMediaType(){
